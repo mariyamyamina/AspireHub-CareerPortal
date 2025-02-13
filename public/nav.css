@@ -1,0 +1,139 @@
+body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD"
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 11vh;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    padding: 2px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbarCategories li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbarCategories li a:hover {
+    color: blue;
+}
+
+.fa,
+.fa-solid {
+    font-size: 1.8rem;
+}
+#fa-toggle-on{
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.icon {
+    display: flex;
+    gap: 2rem;
+}
+
+.icon i {
+    font-size: 1rem;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.icon button a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon button {
+    height: 3rem;
+}
+
+body {
+    transition: background 0.3s, color 0.3s;
+}
+
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.search-container input:focus {
+    border-color: #75b0ef;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-container .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.search-container .search-icon:hover {
+    color: #007bff;
+}
+
+.navbarCategories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.navbarCategories ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarCategories ul li {
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.dropdown a{
+    font-size: 16px;
+    font-weight: bold;
+}
+.dropdown-menu {
+    display: none; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; 
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-item:hover{
+    background-color: white;
+}
+
+

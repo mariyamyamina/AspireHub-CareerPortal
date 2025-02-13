@@ -1,0 +1,164 @@
+
+body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD";
+}
+
+.about-img-container {
+    background-image: url("./ban1.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+}
+
+.about-content {
+    align-items: center;
+    padding: 6rem;
+    width: 120vh;
+}
+
+.experiences-count {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    color: rgb(15, 52, 86);
+}
+
+.counselling-count,
+.phychometrics-count,
+.experts {
+    line-height: 10px;
+}
+
+.fa-users,
+.fa-graduation-cap,
+.fa-desktop {
+    font-size: 3rem;
+}
+
+.count {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.motto {
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+}
+
+.box {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid rgb(39, 164, 222);
+    height: 33rem;
+    width: 19rem;
+    padding: .5rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.partnership-container h2,
+.review-container h2 {
+    text-align: center;
+}
+
+.img-row {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.one img {
+    border-radius: 50%;
+}
+
+.review-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.review-container h2 {
+    color: #3a3a3a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.review-banner p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.review-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.testimonial-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 365px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quote-icon {
+    font-size: 30px;
+    color: #4caf50;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.student {
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.profile p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.rating {
+    margin-top: 10px;
+    color: #ff9900;
+    font-size: 16px;
+}
+
+.author {
+    text-align: right;
+    margin-right: 3rem;
+}
