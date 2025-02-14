@@ -5,14 +5,14 @@
 }
 
 body {
-    font-family: Palatino, "Palatino Linotype", "Palatino LT STD"
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD";
+    overflow-x: hidden;
 }
 
 .banner-container {
     width: 100%;
     overflow: hidden;
     position: relative;
-    
 }
 
 .banner {
@@ -31,18 +31,102 @@ body {
     color: white;
     position: absolute;
     bottom: 12rem;
+    left: 3rem;
+    right: 3rem;
+    text-align: start;
+    width: 100%;
 }
 
 .banner-text h1,
 h3,
 h4 {
-    margin-bottom: 2rem;
-    margin-left: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .ban-btn {
-    margin-left: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
 }
+
+.ban-btn a {
+    text-decoration: none;
+}
+
+.ban-btn button {
+    font-size: 1rem;
+    padding: 12px 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .banner img {
+        height: 300px; /* Adjust image height for smaller screens */
+    }
+
+    .banner-text {
+        bottom: 28rem; /* Adjust position for smaller screens */
+        left: 1rem;
+        right: 1rem;
+        text-align: start;
+    }
+
+    .banner-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .banner-text h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .ban-btn {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .ban-btn button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner img {
+        height: 250px; /* Further reduce the image height on very small screens */
+    }
+
+    .banner-text {
+        bottom: 30rem;
+        text-align: center;
+    }
+
+    .banner-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .banner-text h3 {
+        font-size: 1rem;
+    }
+
+    .banner-text h4 {
+        font-size: 0.9rem;
+    }
+    
+    .ban-btn button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+       
+    }
+    .ban-btn {
+        margin-bottom: 2rem;
+    }
+}
+
 
 /* .box-container h2 {
     margin-left: 2rem;
@@ -220,6 +304,8 @@ h4 {
 .text-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
+    padding: 2rem; /* Add padding for better spacing */
 }
 
 .text-container h2 {
@@ -235,12 +321,63 @@ h4 {
 
 .text p {
     font-size: 1.2rem;
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
 }
 
 .image {
     height: auto;
     width: 40%;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .text-container {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center the content */
+    }
+
+    .text {
+        width: 90%; /* Make the text container take more width on small screens */
+        padding: 2rem;
+    }
+
+    .text-container h2 {
+        font-size: 1.8rem; /* Adjust heading size */
+        text-align: center;
+    }
+
+    .text p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .image {
+       display: none;/* Add spacing above the image */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-container {
+        padding: 1rem; /* Reduce padding for very small screens */
+    }
+
+    .text {
+        width: 100%; /* Full width for the text container */
+        padding: 1.5rem;
+    }
+
+    .text-container h2 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    .text p {
+        font-size: 0.9rem; /* Reduce paragraph font size */
+    }
+
+    .image {
+        display: none;/* Image takes full width on very small screens */
+    }
+}
+
 
 
 .vertical-box {
@@ -260,7 +397,7 @@ h4 {
 }
 
 .vertical-box .para {
-    width: 70%;
+    width: 80%;
     text-align: center;
     margin-bottom: 1rem;
     color: rgb(120, 120, 120);
@@ -309,24 +446,35 @@ h4 {
     .container {
         flex-direction: column;
         align-items: center;
+        padding: 10px;
     }
 
     .container img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 150px;
         margin-bottom: 15px;
     }
 
     .container-text {
         margin-left: 0;
-        text-align: center;
+        text-align: start;
     }
 
     .vertical-box .para {
         width: 90%;
     }
-}
 
+    .std-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .std-card {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
 
 .input-container {
     text-align: center;
@@ -335,7 +483,8 @@ h4 {
 
 input[type="text"] {
     padding: 10px;
-    width: 300px;
+    width: 50%;
+    max-width: 300px;
     border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
@@ -361,6 +510,7 @@ button:hover {
     justify-content: center;
     gap: 3rem;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .std-container-outer {
@@ -382,11 +532,13 @@ button:hover {
     padding: 1rem;
     border-radius: 2rem;
 }
-.std-card:hover{
-    box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.1),-10px -8px 8px rgba(0, 0, 0, 0.1);
+
+.std-card:hover {
+    box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.1), -10px -8px 8px rgba(0, 0, 0, 0.1);
     transition: 1s;
     cursor: pointer;
 }
+
 .std-card img {
     width: 100%;
     height: 50%;
@@ -394,9 +546,7 @@ button:hover {
     border-radius: 2rem;
 }
 
-.std-card-body h4,
-h5,
-p {
+.std-card-body h4, h5, p {
     text-align: start;
     margin: 0;
     margin-bottom: 1rem;

@@ -1,8 +1,8 @@
-
 body {
-     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua";
-     overflow-x: hidden;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua";
+    overflow-x: hidden;
 }
+
 .sslc-img-container {
     background-image: url("./guidance-banner.jpg");
     width: 100%;
@@ -15,15 +15,86 @@ body {
     align-items: center;
     padding: 4rem;
     padding-top: 6rem;
-    width: 100vh;
-    color:black;
+    width: 100%;
+    color: black;
+    text-align: start; /* Center align the content */
 }
-.sslc-banner-content h1{
+
+.sslc-banner-content h1 {
     margin-bottom: 2rem;
+    font-size: 36px; /* Adjust font size */
 }
-.sslc-banner-content h3{
+
+.sslc-banner-content h3 {
     margin-bottom: 2rem;
+    font-size: 20px; /* Adjust font size */
 }
+
+.ban-btn {
+    display: flex;
+    justify-content:start;
+    gap: 20px;
+}
+
+.ban-btn button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sslc-banner-content {
+        padding: 3rem 2rem; /* Reduced padding for smaller screens */
+        padding-top: 4rem; /* Adjusted padding-top */
+    }
+
+    .sslc-banner-content h1 {
+        font-size: 28px; /* Reduced font size for heading */
+    }
+
+    .sslc-banner-content h3 {
+        font-size: 18px; /* Reduced font size for subheading */
+    }
+
+    .ban-btn {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+    }
+
+    .ban-btn button {
+        width: 100%; /* Full-width buttons on mobile */
+        padding: 12px 0; /* Adjust padding for better touch targets */
+        font-size: 18px; /* Increase button text size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .sslc-banner-content h1 {
+        font-size: 24px; /* Further reduced font size for smaller screens */
+    }
+
+    .sslc-banner-content h3 {
+        font-size: 16px; /* Further reduced font size for subheading */
+    }
+    .ban-btn {
+          display: flex;
+          flex-direction: row;
+    }
+
+    .ban-btn button {
+        width: 100%;
+        padding: 14px 5px; /* Adjust button padding for very small screens */
+        font-size: 15px; /* Increased font size for better touch targets */
+    }
+    .sslc-img-container {
+        background-image: url("./guidance-banner.jpg");
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+}
+
 .vertical-box {
     display: flex;
     flex-direction: column;
@@ -48,8 +119,7 @@ body {
     color: rgb(120, 120, 120);
 }
 
-
-/* .img-container img{
+/* .img-container img {
     flex: 1;
     width: 400px;  
 } */
@@ -67,7 +137,6 @@ body {
     width: 90%;
     max-width: 900px;
     flex-wrap: wrap;
-    
 }
 
 .container img {
@@ -75,7 +144,6 @@ body {
     object-fit: cover;
     border-radius: 8px;
     margin-right: 20px;
-    
 }
 
 .container-text {
@@ -94,36 +162,94 @@ body {
     color: #555;
 }
 
+.Polytechnic {
+    display: flex;
+}
 
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
+    .vertical-box {
+        width: 90%; /* Reduce width to fit better on smaller screens */
     }
 
-    .container img {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 15px;
-       
-    }
-
-    .container-text {
-        margin-left: 0;
-        text-align: center;
+    .vertical-box-h2 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
     }
 
     .vertical-box .para {
         width: 90%;
-       
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Reduced padding */
+    }
+
+    .container img {
+        width: 100%; /* Full-width images on mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 15px;
+    }
+
+    .container-text {
+        margin-left: 0;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .container-text h3 {
+        font-size: 1.3rem; /* Adjust heading size for mobile */
+    }
+
+    .Polytechnic {
+        flex-direction: column;
+    }
+
+    .vertical-box .para {
+        width: 100%;
     }
 }
 
+/* Additional mobile optimizations for very small screens */
+@media (max-width: 480px) {
+    .vertical-box-h2 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
 
-.Polytechnic{
-    display: flex;
+    .vertical-box .para {
+        font-size: 0.9rem; /* Adjust paragraph font size for very small screens */
+    }
+
+    .container {
+        margin: 10px 0; /* Reduce margin for small screens */
+        width: 100%; /* Full width for containers */
+    }
+
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container-text h3 {
+        font-size: 1.2rem; /* Adjust heading font size */
+    }
+    .container-text {
+        text-align: start;
+    }
 }
-.Horizontal-box , .faq-box {
+
+.Horizontal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    margin-top: 0;
+    width: 100vw;
+}
+.faq-box{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,36 +259,41 @@ body {
     margin-top: 0;
     width: 60vw;
 }
-.Horizontal-box p{
+.Horizontal-box p {
     padding-bottom: 1rem;
 }
-  
-.horizontal-container{
+
+.horizontal-container {
     width: 300px;
     height: 530px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
+    margin-bottom: 1rem;
 }
-.horizontal-container-text{
+
+.horizontal-container-text {
     padding: 1rem;
     text-align: start;
 }
-.horizontal-img-container{
+
+.horizontal-img-container {
     height: 200px;
-    width: 300px;
-   
+    width: 100%;
 }
-.horizontal-img-container img{
+
+.horizontal-img-container img {
     height: 200px;
     width: 100%;
     border-radius: 8px 8px 0 0;
 }
-.horizontal-flex{
+
+.horizontal-flex {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center content for small screens */
 }
 
 .faq-item {
@@ -172,6 +303,7 @@ body {
     overflow: hidden;
     width: 100%;
 }
+
 .faq-question {
     background: #f4f4f4;
     padding: 10px;
@@ -180,9 +312,59 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .faq-answer {
     display: none;
     padding: 10px;
     background: #fff;
     text-align: start;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .Horizontal-box,
+    .faq-box {
+        width: 90vw; /* Make the boxes take up more space on smaller screens */
+    }
+
+    .horizontal-container {
+        width: 100%; /* Ensure the container takes full width on smaller screens */
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .horizontal-img-container img {
+        height: auto; /* Maintain image aspect ratio */
+    }
+
+    .horizontal-flex {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        gap: 1rem; /* Reduce space between items */
+    }
+
+    .faq-question {
+        padding: 15px 10px; /* Adjust padding */
+    }
+
+    .faq-answer {
+        padding: 15px 10px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .horizontal-container {
+        width: 100%; /* Full width for smaller screens */
+        height: auto;
+    }
+    .horizontal-img-container img {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        padding-top: 10px;
+    }
+
+    .faq-item {
+        width: 100%; /* Ensure FAQ items take full width */
+    }
+    
 }

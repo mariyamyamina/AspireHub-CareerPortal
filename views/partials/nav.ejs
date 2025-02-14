@@ -1,4 +1,3 @@
-
 <nav class="navbar">
     <div>
         <img src="logo.jpg" alt="logo" width="50px" height="50px">
@@ -10,30 +9,54 @@
     </div>
 
     <div class="icon">
-       
-        <!-- <i class="fa fa-download" aria-hidden="true"></i> -->
-        <!-- <i class="fa fa-user-circle" aria-hidden="true"></i> -->
-        <a href="https://play.google.com/store/games?device=windows"><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-arrow-down"></i>Install App</button></a>
-        <a href="login"><button type="button" class="btn btn-primary"><i class="fa-solid fa-user"></i>Login</button></a>
-        <i id="fa-toggle-on"class="fa-solid fa-toggle-on"></i>
+        <a href="https://play.google.com/store/games?device=windows">
+            <button type="button" class="btn btn-primary">
+                <i class="fa-solid fa-circle-arrow-down"></i> Install App
+            </button>
+        </a>
+        <a href="login">
+            <button type="button" class="btn btn-primary">
+                <i class="fa-solid fa-user"></i> Login
+            </button>
+        </a>
+        <i id="fa-toggle-on" class="fa-solid fa-toggle-on"></i>
     </div>
-    
 </nav>
+
+<!-- Mobile Menu Toggle Button -->
+<div class="hamburger-menu" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+</div>
+
 <nav class="navbarCategories">
-    <ul>
+    <ul class="menu">
         <li><a href="ejshome">HOME</a></li>
         <li><a href="about">ABOUT US</a></li>
         <li><a href="resource">RESOURCES</a></li>
-        <!-- <li><a href="hscGuidance">CAREER GUIDANCE</a></li> -->
         <div class="dropdown">
-            <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink">
                 CAREER GUIDANCE
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="sslcGuidance">8-10 class</a></li>
-              <li><a class="dropdown-item" href="hscGuidance">11-12 class</a></li>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="sslcGuidance">8-10 class</a></li>
+                <li><a class="dropdown-item" href="hscGuidance">11-12 class</a></li>
             </ul>
-          </div>
+        </div>
         <li><a href="contact">CONTACT US</a></li>
+        <li class="close-menu" onclick="toggleMenu()"><i class="fa fa-times"></i></li>
+
+        <div class="icon-bar">
+            <a href="login">
+                <button type="button" class="btn btn-primary">
+                    <i class="fa-solid fa-user"></i> Login
+                </button>
+            </a>
+        </div>
     </ul>
 </nav>
+<script>
+    function toggleMenu() {
+    document.querySelector(".navbarCategories").classList.toggle("open");
+}
+
+</script>

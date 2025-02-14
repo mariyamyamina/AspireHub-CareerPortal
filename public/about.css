@@ -9,12 +9,41 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 480px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
 }
 
 .about-content {
-    align-items: center;
+    text-align: start;
     padding: 6rem;
-    width: 120vh;
+    width: 60%; /* Ensure content doesn't stretch too wide on larger screens */
+    color: black; /* Ensures text is visible on image background */
+}
+.about-text {
+    display: none;
+}
+/* Mobile view adjustments */
+@media (max-width: 900px) {
+    .about-img-container {
+        height: 300px; /* Adjust image container height for smaller screens */
+    }
+
+    .about-text {
+        display: block;
+        padding: 2rem; /* Reduce padding for smaller screens */
+        width: 90%; /* Make content fit better on smaller screens */
+    }
+    .about-content{
+        display: none;
+    }
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
 }
 
 .experiences-count {
@@ -23,12 +52,14 @@ body {
     justify-content: center;
     gap: 55px;
     color: rgb(15, 52, 86);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .counselling-count,
 .phychometrics-count,
 .experts {
     line-height: 10px;
+    text-align: center; /* Center the text for better alignment */
 }
 
 .fa-users,
@@ -44,10 +75,36 @@ body {
     justify-content: center;
 }
 
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .experiences-count {
+        gap: 20px; /* Reduce gap between items */
+        margin: 1rem; /* Adjust margin for mobile view */
+        flex-direction: column; /* Stack the items vertically */
+        text-align: center; /* Center the text */
+    }
+
+    .fa-users,
+    .fa-graduation-cap,
+    .fa-desktop {
+        font-size: 2rem; /* Reduce icon size for smaller screens */
+    }
+
+    .count h2 {
+        font-size: 1.5rem; /* Adjust font size for the numbers */
+    }
+
+    .count p {
+        font-size: 1rem; /* Adjust font size for the text */
+    }
+}
+
 .motto {
     justify-content: center;
     display: flex;
     gap: 40px;
+    flex-wrap: wrap; /* Allow the boxes to wrap to new lines on small screens */
+    padding: 2rem;
 }
 
 .box {
@@ -59,12 +116,39 @@ body {
     padding: .5rem;
     border-radius: 0.8rem;
     text-align: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
+
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .motto {
+        gap: 20px; /* Reduce the gap between boxes */
+        padding: 1rem; /* Adjust padding on smaller screens */
+    }
+
+    .box {
+        height: auto; /* Allow height to adjust based on content */
+        width: 100%; /* Set boxes to full width on mobile */
+        max-width: 320px; /* Limit width to 320px on small screens */
+        margin-bottom: 1rem; /* Add space between boxes */
+    }
+
+    
+
+    
+}
+
 
 .partnership-container h2,
 .review-container h2 {
     text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .img-row {
@@ -73,11 +157,39 @@ body {
     gap: 70px;
     align-items: center;
     padding: 15px;
-
+    flex-wrap: wrap; /* Allow the logos to wrap on smaller screens */
 }
 
 .one img {
     border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .img-row {
+        gap: 20px; /* Reduce the gap between images */
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+
+    .one img {
+        width: 60px; /* Reduce image size on mobile */
+        height: 60px; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .img-row {
+        gap: 10px; /* Further reduce gap for very small screens */
+    }
+
+    .one img {
+        width: 50px; /* Further reduce image size */
+        height: 50px; /* Maintain aspect ratio */
+    }
+    
 }
 
 .review-container {
