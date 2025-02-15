@@ -56,40 +56,73 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-.search-container {
-    position: relative;
-    width: 400px;
-}
+ .search-container {
+            position: relative;
+            width: 400px;
+        }
 
-.search-container input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    background-color: whitesmoke;
-    border-radius: 25px;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s ease-in-out;
-}
+        .search-container input {
+            width: 100%;
+            padding: 10px 40px 10px 15px; /* Adjust padding to fit icon inside */
+            border: 2px solid #ccc;
+            background-color: whitesmoke;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
 
-.search-container input:focus {
-    border-color: #75b0ef;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
+        .search-container input:focus {
+            border-color: #75b0ef;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
 
-.search-container .search-icon {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888;
-    font-size: 18px;
-    cursor: pointer;
-}
+        .search-container .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 18px;
+            cursor: pointer;
+        }
 
-.search-container .search-icon:hover {
-    color: #007bff;
-}
+        .search-container .search-icon:hover {
+            color: #007bff;
+        }.search-container {
+            position: relative;
+            width: 300px; /* Adjust as needed */
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 12px 40px 12px 15px; /* Right padding for icon */
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .search-container input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .search-container .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .search-container input:focus + .search-icon {
+            color: #007bff;
+        }
 
 .navbarCategories {
     display: flex;
