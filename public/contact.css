@@ -24,19 +24,18 @@ body {
     max-width: 90%;
 }
 
-.banner h1 {
+.banner-text h1 {
     font-size: 32px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
-.banner p {
+.banner-text p {
     font-size: 16px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .btnn {
     padding: 10px 20px;
-    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;

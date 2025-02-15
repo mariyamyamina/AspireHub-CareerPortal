@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div>
-        <img src="logo.jpg" alt="logo" width="50px" height="50px">
+        <img src="logo.png" alt="logo" width="50px" height="50px">
     </div>
 
     <div class="search-container">
@@ -18,15 +18,24 @@
             <button type="button" class="btn btn-primary">
                 <i class="fa-solid fa-user"></i> Login
             </button>
+            
         </a>
-        <i id="fa-toggle-on" class="fa-solid fa-toggle-on"></i>
+       
     </div>
 </nav>
 
-<!-- Mobile Menu Toggle Button -->
-<div class="hamburger-menu" onclick="toggleMenu()">
-    <i class="fa fa-bars"></i>
+
+<!-- Mobile Header with AspireHub and Menu Icon -->
+<div class="hamburger-menu">
+    <div class="logo-name">
+    <div>
+        <img src="logo.png" alt="logo" width="30px" height="30px">
+    </div>
+    <div class="mobile-navbar">AspireHub</div>
 </div>
+    <i class="fa fa-bars" onclick="toggleMenu()"></i>
+</div>
+
 
 <nav class="navbarCategories">
     <ul class="menu">
@@ -58,5 +67,6 @@
     function toggleMenu() {
     document.querySelector(".navbarCategories").classList.toggle("open");
 }
+
 
 </script>

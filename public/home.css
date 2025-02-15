@@ -9,121 +9,97 @@ body {
     overflow-x: hidden;
 }
 
-.banner-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
 
 .banner {
+    background-image: url("./aboutBanner.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
     display: flex;
-    width: 500%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.banner img {
-    width: 100vw;
-    height: 500px;
-    object-fit: cover;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner-text {
     color: white;
-    position: absolute;
-    bottom: 12rem;
-    left: 3rem;
-    right: 3rem;
-    text-align: start;
-    width: 100%;
+    padding: 4rem 0 4rem 1rem;
+    text-align: start; /* Center text in mobile view */
+    width: 80%; /* Reduce width to ensure content fits on smaller screens */
+    border-radius: 10px;
 }
 
-.banner-text h1,
-h3,
-h4 {
-    margin-bottom: 1.5rem;
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 2rem;
 }
 
-.ban-btn {
-    display: flex;
-    gap: 1rem;
-    justify-content: start;
+.banner h4 {
+    font-size: 18px;
+    margin-bottom: 2rem;
 }
 
-.ban-btn a {
-    text-decoration: none;
+.btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px; /* Space between buttons */
 }
 
-.ban-btn button {
-    font-size: 1rem;
-    padding: 12px 20px;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .banner img {
-        height: 300px; /* Adjust image height for smaller screens */
+/* Responsive design for mobile view */
+@media (max-width: 768px) {
+    .banner {
+        height: 350px; /* Adjust height for smaller screens */
     }
 
     .banner-text {
-        bottom: 28rem; /* Adjust position for smaller screens */
-        left: 1rem;
-        right: 1rem;
-        text-align: start;
+        padding: 3rem;
+        width: 85%;
     }
 
-    .banner-text h1 {
-        font-size: 1.5rem;
+    .banner h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+        margin-bottom: 1rem;
     }
 
-    .banner-text h3 {
-        font-size: 1.2rem;
+    .banner h4 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin-bottom: 1.5rem;
     }
 
-    .banner-text h4 {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .ban-btn {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .ban-btn button {
-        font-size: 0.9rem;
-        padding: 10px 15px;
+    .btn {
+        padding: 8px 16px; /* Reduce button padding */
+        font-size: 14px; /* Adjust font size for buttons */
     }
 }
 
-@media screen and (max-width: 480px) {
-    .banner img {
-        height: 250px; /* Further reduce the image height on very small screens */
+@media (max-width: 480px) {
+    .banner {
+        height: 300px; /* Further adjust height for very small screens */
     }
 
     .banner-text {
-        bottom: 30rem;
-        text-align: center;
+        padding: 2rem;
+        width: 90%;
     }
 
-    .banner-text h1 {
-        font-size: 1.3rem;
+    .banner h1 {
+        font-size: 22px; /* Further reduce font size */
+        margin-bottom: 1rem;
     }
 
-    .banner-text h3 {
-        font-size: 1rem;
+    .banner h4 {
+        font-size: 14px; /* Further reduce font size */
+        margin-bottom: 1rem;
     }
 
-    .banner-text h4 {
-        font-size: 0.9rem;
-    }
-    
-    .ban-btn button {
-        font-size: 0.8rem;
-        padding: 8px 12px;
-       
-    }
-    .ban-btn {
-        margin-bottom: 2rem;
+    .btn {
+        padding: 6px 12px; /* Further reduce button padding */
+        font-size: 12px; /* Further reduce button font size */
     }
 }
 
